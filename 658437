@@ -1,0 +1,1232 @@
+local PlayerID = {
+108500281; 
+108500281; 
+}
+if PlayerID[1] and PlayerID[2] == game:GetService("Players").LocalPlayer.UserId then
+    for i = 1,math.huge do
+game:GetService("StarterGui"):SetCore("SendNotification", {
+    Title = "RYKER V2.1";
+    Text = "By SawFuntime";
+    Icon = "rbxassetid://2541869220";
+	})
+	
+game.StarterGui:SetCore("SendNotification", {
+    Title = "Rykers's notifier",
+    Text = "To see commands press F9",
+    Icon = "",
+    Duration = 10,
+})
+
+print("-------------------CMDS-------------------")
+print("reset = friend is obvious")
+print("antife/af = remove ur hand to helps you avoid being feloped")
+print("rejoin/rj = a regular rejoin ")
+print("chatspy/cs = check the chat duu")
+print("rtoreset/rtr = reset if u press r sped")
+print("autor/ar = turn on auto reset your character will automatically reset if knocked down") 
+print("day/daymap = turn on permanent day")
+print("beastmode/bm =  when you activate this your screen will change to a red filter similar to the sight of a predator(❌Disabled❌)")
+print("toxicmode = a strange filter will make your screen look radioactive(❌Disabled❌)")
+print("modeoff/moff = turn off any mode(❌Disabled❌)")
+print("spacemap/sm = activate space skybox")
+print("sadmap/ss = activate sad skybox")
+print("fov70-120 = change ur FOV between 70 and 120")
+print("true toxic/tt = basically toxic mode but with a permanent dark sky")
+print("beef/trashtalk = Turn on beef keys T,Y,G,H  you will make a message appear to throw beef (T= EZ Y= DOG G= LOL H= L )")
+print("disco bullets/db = Make ur trails look epic")
+print("drugmode/dm = drugs can make u see the world diferent(❌Disabled❌)")
+print("glock/gl = turn on glock launch")
+print("anti afk/afk = the name is more than obvious")
+print("bulletcounter/bc = activate the bullet counter")
+print("mcbullets/mctrails = your bullets will be red and yellow")
+print("drama/dd = after being knocked out your character will scream in agony (recommended to use with auto r)")
+print("nosit/rc = avoid sitting in inappropriate places")
+print("removeclothes/rcl = undress in front of everyone")
+print("noface/nf = remove your face to show every possible expression")
+print("evilbullets/ebs = Make ur trails look red and black like the hell")
+print("blackbullets/bbs = Make ur trails look black...its all lol")
+print("sit = sit where you want")
+print("realisticpov/rpov = change the pov of your first person allowing you to see it from a more realistic perspective")
+print("milkmap = the whole map is seen in a white texture")
+print("serverhop/hop = switch to a random server")
+print("cashesp/cash = Turn on cash esp to you know get money OFC")
+print("xtosit/xsit = Turn on ur key X to sit ur character where u want")
+print("creepymap/cm = Make fog appear around the map giving a creepy touch")
+
+local Ryker = Instance.new("ScreenGui")
+local TextLabel_1 = Instance.new("TextLabel")
+Ryker.Name = "Ryker"
+Ryker.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+Ryker.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+Ryker.ResetOnSpawn = false
+
+
+TextLabel_1.Parent = Ryker
+TextLabel_1.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_1.BackgroundColor3 = Color3.fromRGB(0, 0, 1)
+TextLabel_1.BackgroundTransparency = 1.000
+TextLabel_1.Position = UDim2.new(0.949766397, 0, 0.744898021, 0)
+TextLabel_1.Size = UDim2.new(0.100000001, 0, 0.100000001, 0)
+TextLabel_1.Font = Enum.Font.SourceSansBold
+TextLabel_1.Text = "Ryker v2"
+TextLabel_1.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_1.TextScaled = true
+TextLabel_1.TextSize = 7.000
+TextLabel_1.TextStrokeColor3 = Color3.fromRGB(255, 0, 0)
+TextLabel_1.TextStrokeTransparency = 0.000
+TextLabel_1.TextWrapped = true
+
+
+local MainGui = Instance.new("ScreenGui", game:GetService("CoreGui"))
+MainGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+local CBar = Instance.new("TextBox", MainGui)
+CBar.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+CBar.BorderColor3 = Color3.fromRGB(255, 0, 0)
+CBar.BorderSizePixel = 2
+CBar.Position = UDim2.new(0.0001404288, 0, 0.636111104, -12)
+CBar.Size = UDim2.new(0, 0, 0, 20)
+CBar.Visible = false
+CBar.Font = Enum.Font.GothamBlack
+CBar.PlaceholderColor3 = Color3.fromRGB(255, 255, 255)
+CBar.Text = ""
+CBar.TextColor3 = Color3.fromRGB(255, 0, 0)
+CBar.TextSize = 15
+CBar.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+
+local Frame = Instance.new("Frame", MainGui)
+Frame.BackgroundTransparency = 1
+Frame.Position = UDim2.new(0.005, 0, 0, 0)
+Frame.Size = UDim2.new(0, 91, 0, 100)
+
+local UIListLayout = Instance.new("UIListLayout", Frame)
+UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+
+local Uis = game:GetService("UserInputService")
+local Ctrl = false
+Uis.InputBegan:Connect(function(Key, Typing)
+   if Typing then return end
+       if Key.KeyCode.Name == "Semicolon" then -- change this to what you like
+       CBar.Visible = true
+       CBar.Text = ""
+       wait()
+       CBar:CaptureFocus()
+       CBar:TweenSize(UDim2.new(0, 319, 0, 20), "Out", "Quad", 0.1, true)
+   end
+end)
+CBar.FocusLost:Connect(function(Foc)
+   if Foc == true then
+       CBar:TweenSize(UDim2.new(0, 0, 0, 20), "Out", "Quad", 0.1, true)
+       wait()
+       CBar.Visible = false
+    game.GetService(game, "Players"):Chat(" ".. CBar.Text)
+   end
+end)
+Uis.InputEnded:Connect(function(Key)
+   if Key.KeyCode.Name == "LeftAlt" then
+       Ctrl = false
+       CBar.Visible = false -- Dont mind this
+   end
+end)
+
+
+getgenv().Commands = {}
+getgenv().Prefix = " " -- ONLY space out something like /e so its not like "/egoto <plrname>", Can be a word of your choice for example: ".goto <plrname>"
+getgenv().AddCommand = function(CmdName, CmdAlias, Desc, Func)
+   Commands[#Commands + 1] = {
+       ["Name"] = CmdName;
+       ["Alias"] = CmdAlias;
+       ["Description"] = Desc;
+       ["Function"] = Func;
+   }
+end
+
+getgenv().Search = function(CmdName)
+   for _, v in pairs(Commands) do
+       if v.Name == CmdName or table.find(v.Alias, CmdName) then  
+           return v.Function
+       end -- Find the command name and returns it Alias (second name) or just name
+   end
+end
+
+getgenv().CheckCmd = function(Cmd)
+   Cmd = string.lower(Cmd)
+   if Cmd:sub(1, #Prefix) == Prefix then
+       local args = string.split(Cmd:sub(#Prefix + 1), " ") -- Makes shit less hard
+       getgenv().CmdName = Search(table.remove(args, 1)) -- Searches for the command
+       if CmdName and args then
+           return CmdName(args) -- basically execution
+       end
+   end
+end
+
+getgenv().psearch = function(Name)
+   for _, p in pairs(game:GetService("Players"):GetPlayers()) do
+       if string.lower(string.sub(p.Name, 1, string.len(Name))) == string.lower(Name) then
+           return p -- This is a bonus for beginners
+       end
+   end
+end
+
+getgenv().Notify = function(title, text, icon, time)
+   game.StarterGui:SetCore("SendNotification",{
+       Title = title;
+       Text = text;
+       Icon = icon;
+       Duration = time;
+   }) -- This is a bonus
+end
+local LocalP = game:GetService("Players").LocalPlayer -- So i dont have to type it out
+
+
+
+AddCommand("reset", {"r", "die"}, "kill yourself", function()
+    if game.Players.LocalPlayer.Character.Head then
+   game.Players.LocalPlayer.Character.Humanoid.Health = 0
+    end
+
+end)
+
+
+AddCommand("antife", {"af", "antifeloop"}, "turn on anti feloop", function()
+    if game.Players.LocalPlayer.Character then
+    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("","All")
+	game:GetService("StarterGui"):SetCore("SendNotification", {
+    Title = "Anti feloop";
+    Text = "On";
+    Duration = 3,
+	})
+        game.Players.LocalPlayer.Character["Right Arm"]:Remove()
+    end
+
+end)
+
+AddCommand("rejoin", {"rj", "turnback"}, "rejoin sped", function()
+    if game.Players.LocalPlayer.Character.Head then
+   game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("","All")
+	game:GetService("StarterGui"):SetCore("SendNotification", {
+    Title = "Rejoin";
+    Text = "rejoining...";
+    Icon = "rbxassetid://2541869220";
+    Duration = 3,
+	})
+        local ts = game:GetService("TeleportService")
+        local p = game:GetService("Players").LocalPlayer
+        ts:Teleport(game.PlaceId, p)
+    end
+
+end)
+
+AddCommand("chatspy", {"viewchat", "chat"}, "Turn on chatspy", function()
+    if game.Players.LocalPlayer.Character then
+   game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("","All")
+	game:GetService("StarterGui"):SetCore("SendNotification", {
+    Title = "Chatspy";
+    Text = "On";
+    Duration = 3,
+	})
+        local chatFrame = game:GetService("Players").LocalPlayer.PlayerGui.Chat.Frame
+        chatFrame.ChatChannelParentFrame.Visible=true
+        chatFrame.ChatBarParentFrame.Position = chatFrame.ChatChannelParentFrame.Position+UDim2.new(UDim.new(),chatFrame.ChatChannelParentFrame.Size.Y)
+    end
+
+end)
+AddCommand("autoreset", {"autor", "ar"}, "turn on auto reset", function()
+    if game.Players.LocalPlayer.Character then
+   game:GetService("StarterGui"):SetCore("SendNotification", {
+        Title = "Auto Reset";
+        Text = "on";
+	})
+        repeat wait() until game:IsLoaded()
+        if game.PlaceId == 455366377 then
+        while wait() do
+        pcall(function()
+        if game.Players.LocalPlayer.Character.Head:FindFirstChild("Bone") then
+        game.Players.LocalPlayer.Character.Humanoid.Health = 0
+        end
+        end)
+        end
+        end
+    end
+
+end)
+AddCommand("Permanentday", {"day", "daymap"}, "turn on permanent day map", function()
+    if game.Players.LocalPlayer.Character then
+    game:GetService("StarterGui"):SetCore("SendNotification", {
+        Title = "Permanent Day";
+        Text = "on";
+	})
+        game.Lighting.Changed:connect(function()
+        game.Lighting.TimeOfDay = "14:00:00"
+        end)
+    end
+
+end)
+
+
+AddCommand("sadmap", {"sadmap", "ss"}, "skybox sad", function()
+    if game.Players.LocalPlayer.Character.Head then
+game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("","All")
+	game:GetService("StarterGui"):SetCore("SendNotification", {
+    Title = "SadMap";
+    Text = "On";
+    Duration = 3,
+	})
+   loadstring(game:HttpGet("https://pastebin.com/raw/TBS54uPx", true))()
+    end
+
+end)
+AddCommand("spacemap", {"spacemap", "sm"}, "skybox space", function()
+    if game.Players.LocalPlayer.Character.Head then
+game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("","All")
+	game:GetService("StarterGui"):SetCore("SendNotification", {
+    Title = "SpaceMap";
+    Text = "On";
+    Duration = 3,
+	})
+   local lighting = game.Lighting
+        if lighting:FindFirstChild("ColorCorrection") then
+            lighting:FindFirstChild("ColorCorrection"):Remove()
+        end
+        if lighting:FindFirstChild("Correction") then
+            lighting:FindFirstChild("Correction"):Remove()
+        end
+        if lighting:FindFirstChildOfClass("SunRaysEffect") then
+            lighting:FindFirstChildOfClass("SunRaysEffect"):Remove()
+        end
+
+        local sunray = Instance.new("SunRaysEffect", lighting)
+        local sky = lighting.Sky
+        sky.SkyboxBk = "http://www.roblox.com/asset/?id=149397692"
+        sky.SkyboxDn = "http://www.roblox.com/asset/?id=149397686"
+        sky.SkyboxFt = "http://www.roblox.com/asset/?id=149397697"
+        sky.SkyboxLf = "http://www.roblox.com/asset/?id=149397684"
+        sky.SkyboxRt = "http://www.roblox.com/asset/?id=149397688"
+        sky.SkyboxUp = "http://www.roblox.com/asset/?id=149397702"
+
+        sky.StarCount = 3000
+        sky.SunAngularSize = 21
+        sky.MoonAngularSize = 11
+
+        local correction = Instance.new("ColorCorrectionEffect", lighting)
+        correction.Name = "Correction"
+        correction.Saturation = -0.4
+        correction.TintColor = Color3.fromRGB(226, 201, 255)
+    end
+
+end)
+
+AddCommand("fov", {"fov70", "70"}, "change the fov", function()
+    if game.Players.LocalPlayer.Character.Head then
+   game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("","All")
+	game:GetService("StarterGui"):SetCore("SendNotification", {
+    Title = "FOV";
+    Text = "changed to 70";
+    Duration = 3,
+	})
+        local amount = 70
+        game:GetService'Workspace'.Camera.FieldOfView = amount
+    end
+
+end)
+
+AddCommand("fov", {"fov80", "80"}, "change the fov", function()
+    if game.Players.LocalPlayer.Character.Head then
+   game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("","All")
+	game:GetService("StarterGui"):SetCore("SendNotification", {
+    Title = "FOV";
+    Text = "changed to 80";
+    Duration = 3,
+	})
+        local amount = 80
+        game:GetService'Workspace'.Camera.FieldOfView = amount
+    end
+
+end)
+
+AddCommand("fov", {"fov90", "90"}, "change the fov", function()
+    if game.Players.LocalPlayer.Character.Head then
+   game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("","All")
+	game:GetService("StarterGui"):SetCore("SendNotification", {
+    Title = "FOV";
+    Text = "changed to 90";
+    Duration = 3,
+	})
+        local amount = 90
+        game:GetService'Workspace'.Camera.FieldOfView = amount
+    end
+
+end)
+
+AddCommand("fov", {"fov100", "100"}, "change the fov", function()
+    if game.Players.LocalPlayer.Character.Head then
+   game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("","All")
+	game:GetService("StarterGui"):SetCore("SendNotification", {
+    Title = "FOV";
+    Text = "changed to 100";
+    Duration = 3,
+	})
+        local amount = 100
+        game:GetService'Workspace'.Camera.FieldOfView = amount
+    end
+
+end)
+
+AddCommand("fov", {"fov110", "110"}, "change the fov", function()
+    if game.Players.LocalPlayer.Character.Head then
+   game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("","All")
+	game:GetService("StarterGui"):SetCore("SendNotification", {
+    Title = "FOV";
+    Text = "changed to 110";
+    Duration = 3,
+	})
+        local amount = 110
+        game:GetService'Workspace'.Camera.FieldOfView = amount
+    end
+
+end)
+
+AddCommand("fov", {"fov120", "120"}, "change the fov", function()
+    if game.Players.LocalPlayer.Character.Head then
+   game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("","All")
+	game:GetService("StarterGui"):SetCore("SendNotification", {
+    Title = "FOV";
+    Text = "changed to 120";
+    Duration = 3,
+	})
+        local amount = 120
+        game:GetService'Workspace'.Camera.FieldOfView = amount
+    end
+
+end)
+
+
+AddCommand("r to reset", {"rtoreset", "rtr"}, "Reset ur player with r", function()
+    if game.Players.LocalPlayer.Character.Head then
+   game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("","All")
+	game:GetService("StarterGui"):SetCore("SendNotification", {
+    Title = "R to reset";
+    Text = "Press R to reset OFC";
+    Duration = 3,
+	})
+        game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(key)
+        if key == "r" then
+        game.Players.LocalPlayer.Character.Humanoid.Health = 0
+        end
+        end)
+    end
+
+end)
+
+AddCommand("beef", {"beef", "trashtalk"}, "Turn on beef keys", function()
+    if game.Players.LocalPlayer.Character.Head then
+   game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("","All")
+	game:GetService("StarterGui"):SetCore("SendNotification", {
+    Title = "Beef keys";
+    Text = "Press T-Y-G-H to beef";
+    Icon = "rbxassetid://2541869220";
+    Duration = 3,
+	})
+         game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(key)
+ if key == "t" then
+                      game:GetService"ReplicatedStorage".DefaultChatSystemChatEvents.SayMessageRequest:FireServer("EZ" ,"All")
+ end
+end)
+ game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(key)
+ if key == "y" then
+                      game:GetService"ReplicatedStorage".DefaultChatSystemChatEvents.SayMessageRequest:FireServer("DOG" ,"All")
+ end
+end)
+ game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(key)
+ if key == "g" then
+                      game:GetService"ReplicatedStorage".DefaultChatSystemChatEvents.SayMessageRequest:FireServer("LOL" ,"All")
+ end
+end)
+ game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(key)
+ if key == "h" then
+                      game:GetService"ReplicatedStorage".DefaultChatSystemChatEvents.SayMessageRequest:FireServer("L" ,"All")
+ end
+end)
+    end
+
+end)
+
+AddCommand("disco bullet", {"discobullets", "db"}, "discoooo", function()
+    if game.Players.LocalPlayer.Character.Head then
+   game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("","All")
+	game:GetService("StarterGui"):SetCore("SendNotification", {
+    Title = "Bullet effect";
+    Text = "on: disco";
+    Duration = 3,
+	})
+        local RunService = game:GetService("RunService")
+
+RunService.RenderStepped:Connect(function()
+    if game.Players.LocalPlayer.Character.Humanoid then
+        --print("humanoid exists")
+        if game.Players.LocalPlayer.Character.Humanoid:findFirstChild("Bullet") then
+            print("bullet exists")
+            if game.Players.LocalPlayer.Character.Humanoid.Bullet:findFirstChild("Trail") then
+                print("trail exists")
+                if game.Players.LocalPlayer.Character.Humanoid:findFirstChild("Bullet").Name == "BulletDone" then
+                    print("bullet done")
+                end
+                if game.Players.LocalPlayer.Character.Humanoid:findFirstChild("Bullet"):findFirstChild("Trail").Lifetime < 0.21 then
+                    print("success!")
+                    game.Players.LocalPlayer.Character.Humanoid:findFirstChild("Bullet").Trail.Lifetime = 0.21
+                    game.Players.LocalPlayer.Character.Humanoid:findFirstChild("Bullet").Trail.Transparency = NumberSequence.new(0)
+                    game.Players.LocalPlayer.Character.Humanoid:findFirstChild("Bullet").Trail.Color = ColorSequence.new(Color3.fromRGB(255,0,0),Color3.fromRGB(0,0,255))Color3.fromRGB(128,0,128)Color3.fromRGB(255,255,255)Color3.fromRGB(223,255,0)Color3.fromRGB(75,0,130)
+                    game.Players.LocalPlayer.Character.Humanoid:findFirstChild("Bullet").Name = "BulletDone"
+                end
+            end
+        end
+    end
+end)
+    end
+
+end)
+
+AddCommand("glock", {"glock", "gl"}, "glock launch fix", function()
+    if game.Players.LocalPlayer.Character.Head then
+   game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("","All")
+	game:GetService("StarterGui"):SetCore("SendNotification", {
+    Title = "Glock Launch";
+    Text = "on";
+    Duration = 3,
+	})
+                game.Players.LocalPlayer.Backpack.Glock.Barrel.CanCollide=true
+    end
+
+end)
+
+AddCommand("anti afk", {"antiafk", "afk"}, "avoid get kicked for inactive", function()
+    if game.Players.LocalPlayer.Character.Head then
+    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("","All")
+	game:GetService("StarterGui"):SetCore("SendNotification", {
+    Title = "Anti AFK";
+    Text = "on";
+    Duration = 3,
+	})
+        if not game:IsLoaded() then
+    game.Loaded:Wait()
+end
+
+local Player = game:GetService("Players").LocalPlayer
+Player.CharacterAdded:Wait()
+
+local vu = game:GetService('VirtualUser')
+Player.Idled:connect(function()
+    vu:CaptureController()
+    vu:ClickButton2(Vector2.new())
+end)
+    end
+
+end)
+
+AddCommand("bullet counter", {"bulletcounter", "bc"}, "turn on bullet counter", function()
+    if game.Players.LocalPlayer.Character.Head then
+   game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("","All")
+	game:GetService("StarterGui"):SetCore("SendNotification", {
+    Title = "Bullet Counter";
+    Text = "on";
+    Duration = 3,
+	})
+local ScreenGui = Instance.new("ScreenGui")
+local ClipsTxt = Instance.new("TextLabel")
+local BulletsTxt = Instance.new("TextLabel")
+ScreenGui.Parent = game.CoreGui
+ClipsTxt.Name = "ClipsTxt"
+ClipsTxt.Parent = ScreenGui
+ClipsTxt.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ClipsTxt.BackgroundTransparency = 1.000
+ClipsTxt.Position = UDim2.new(0, 0, 0.10211359, 0)
+ClipsTxt.Size = UDim2.new(0, 200, 0, 50)
+ClipsTxt.Font = Enum.Font.Gotham
+ClipsTxt.Text = "Clips:"
+ClipsTxt.TextColor3 = Color3.fromRGB(255, 255, 255)
+ClipsTxt.TextSize = 24.000
+ClipsTxt.Visible = false
+
+BulletsTxt.Name = "BulletsTxt"
+BulletsTxt.Parent = ScreenGui
+BulletsTxt.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+BulletsTxt.BackgroundTransparency = 1.000
+BulletsTxt.Position = UDim2.new(0, 0, 0.14211359, 0)
+BulletsTxt.Size = UDim2.new(0, 200, 0, 50)
+BulletsTxt.Font = Enum.Font.Gotham
+BulletsTxt.Text = "Bullets:"
+BulletsTxt.TextColor3 = Color3.fromRGB(255, 255, 255)
+BulletsTxt.TextSize = 24.000
+BulletsTxt.Visible = false
+game.Players.LocalPlayer.PlayerGui.HUD:FindFirstChild("Ammo"):Destroy()
+
+function CustomAmmoUI()
+local gunequipped = false
+for _,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+	if v:IsA("Tool") then
+        if v ~= nil then	
+v.Equipped:Connect(function()
+if v:FindFirstChild("Clips") and v:FindFirstChild("Ammo") then		
+wait(.1)
+ClipsTxt.Text = "Clips:"
+BulletsTxt.Text = "Bullets:"		
+gunequipped = true	
+BulletsTxt.Visible = true
+ClipsTxt.Visible = true
+repeat	
+BulletsTxt.Text = "Bullets: "..v:FindFirstChild("Ammo").Value..""
+ClipsTxt.Text = "Clips: "..v:FindFirstChild("Clips").Value..""
+game:GetService("RunService").Heartbeat:Wait()	
+until gunequipped == false
+else
+return nil			
+end				
+end)
+v.Unequipped:Connect(function()
+ClipsTxt.Text = "Clips:"
+BulletsTxt.Text = "Bullets:"
+gunequipped = false	
+BulletsTxt.Visible = false
+ClipsTxt.Visible = false
+end)
+end			
+end	
+end	
+end
+CustomAmmoUI()
+game.Players.LocalPlayer.Character.Humanoid.Died:Connect(function()
+game.Players.LocalPlayer.Character.Humanoid:UnequipTools()
+end)
+game.Players.LocalPlayer.CharacterAdded:Connect(function()	
+local hud = game.Players.LocalPlayer.PlayerGui:WaitForChild("HUD")
+hud.Ammo:Destroy()
+wait(1)
+CustomAmmoUI()	
+end)
+    end
+
+end)
+
+AddCommand("mcbullet", {"mcbullets", "mctrails"}, "turn on mc trails", function()
+    if game.Players.LocalPlayer.Character.Head then
+   game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("","All")
+	game:GetService("StarterGui"):SetCore("SendNotification", {
+    Title = "Bullet effect";
+    Text = "on: Mcbullets";
+    Duration = 3,
+	})
+        local RunService = game:GetService("RunService")
+
+RunService.RenderStepped:Connect(function()
+    if game.Players.LocalPlayer.Character.Humanoid then
+        --print("humanoid exists")
+        if game.Players.LocalPlayer.Character.Humanoid:findFirstChild("Bullet") then
+            print("bullet exists")
+            if game.Players.LocalPlayer.Character.Humanoid.Bullet:findFirstChild("Trail") then
+                print("trail exists")
+                if game.Players.LocalPlayer.Character.Humanoid:findFirstChild("Bullet").Name == "BulletDone" then
+                    print("bullet done")
+                end
+                if game.Players.LocalPlayer.Character.Humanoid:findFirstChild("Bullet"):findFirstChild("Trail").Lifetime < 0.21 then
+                    print("success!")
+                    game.Players.LocalPlayer.Character.Humanoid:findFirstChild("Bullet").Trail.Lifetime = 0.21
+                    game.Players.LocalPlayer.Character.Humanoid:findFirstChild("Bullet").Trail.Transparency = NumberSequence.new(0)
+                    game.Players.LocalPlayer.Character.Humanoid:findFirstChild("Bullet").Trail.Color = ColorSequence.new(Color3.fromRGB(255,0,0),Color3.fromRGB(248, 255, 0))Color3.fromRGB(255,0,0)Color3.fromRGB(248, 255, 0)Color3.fromRGB(255,0,0)Color3.fromRGB(248, 255, 0)
+                    game.Players.LocalPlayer.Character.Humanoid:findFirstChild("Bullet").Name = "BulletDone"
+                end
+            end
+        end
+    end
+end)
+    end
+
+end)
+
+AddCommand("drama", {"drama", "dd"}, "type AAAAA when u die", function()
+    if game.Players.LocalPlayer.Character.Head then
+   game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("","All")
+	game:GetService("StarterGui"):SetCore("SendNotification", {
+    Title = "Dramatic Death";
+    Text = "Now u can be a drama queen/king";
+    Duration = 3,
+	})
+        repeat wait() until game:IsLoaded()
+if game.PlaceId == 455366377 then
+    while wait() do
+        pcall(function()
+           if game.Players.LocalPlayer.Character.Head:FindFirstChild("Bone") then
+                game:GetService"ReplicatedStorage".DefaultChatSystemChatEvents.SayMessageRequest:FireServer("AAAAAAAAAAAAAAAAAAAAAAAAA" ,"All")
+            end
+        end)
+    end
+end
+    end
+
+end)
+
+AddCommand("neversit", {"nosit", "rc"}, "no sit sped", function()
+    if game.Players.LocalPlayer.Character.Head then
+   game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("","All")
+	game:GetService("StarterGui"):SetCore("SendNotification", {
+    Title = "No Sit";
+    Text = "On";
+    Icon = "rbxassetid://2541869220";
+    Duration = 3,
+	})
+for _,a in pairs(game:GetService("CoreGui"):GetChildren()) do
+    if a.Name == "TheStreetsStuffz" then
+        a:Remove()
+    end
+end
+for _,a in pairs(workspace:GetDescendants()) do
+    if a:IsA("Seat") then
+        a:Remove()
+    end
+end
+    end
+
+end)
+
+AddCommand("noface", {"noface", "nf"}, "remove ur face", function()
+    if game.Players.LocalPlayer.Character.Head then
+    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("","All")
+	game:GetService("StarterGui"):SetCore("SendNotification", {
+    Title = "Face removed";
+    Text = ".-.";
+    Duration = 3,
+	})
+        game.Players.LocalPlayer.Character.Head.face:Destroy()
+    end
+
+end)
+
+AddCommand("remove clothes", {"removeclothes", "rcl"}, "be natural", function()
+    if game.Players.LocalPlayer.Character.Head then
+    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("","All")
+	game:GetService("StarterGui"):SetCore("SendNotification", {
+    Title = "Clothes removed";
+    Text = "go natural";
+    Duration = 3,
+	})
+        local pchar = game:GetService("Players").LocalPlayer.Character -- This bypasses all Anti exploits so do not worry .
+if pchar:FindFirstChild("Shirt") then
+    pchar.Shirt:Remove()
+end
+if pchar:FindFirstChild("Pants") then
+    pchar.Pants:Remove()
+end
+if pchar:FindFirstChild("Shirt Graphic") then
+    pchar["Shirt Graphic"].Graphic = ""
+end
+    end
+
+end)
+
+AddCommand("sit", {"sit", "down"}, "sit down", function()
+    if game.Players.LocalPlayer.Character.Head then
+   game.Players['LocalPlayer'].Character.Humanoid.Sit = true
+    end
+
+end)
+
+AddCommand("realistic pov", {"realisticpov", "rpov"}, "POV", function()
+    if game.Players.LocalPlayer.Character.Head then
+   game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("","All")
+	game:GetService("StarterGui"):SetCore("SendNotification", {
+    Title = "Realistic POV";
+    Text = "on, rejoin to remove sorry lol";
+    Duration = 3,
+	})
+        -- initialize local variables
+local camera = workspace.CurrentCamera
+local player = game.Players.LocalPlayer
+local character = player.Character
+local humanoid = character.Humanoid
+ 
+-- camera settings
+-- player.CameraMaxZoomDistance = 0.5 -- force first person
+camera.FieldOfView = 106
+humanoid.CameraOffset = Vector3.new(0, 0, -1)
+ 
+-- set and keep every body part Transparency to its real transparency
+for childIndex, child in pairs(character:GetChildren()) do
+    if child:IsA("BasePart") and child.Name ~= "Head" then
+        
+        child:GetPropertyChangedSignal("LocalTransparencyModifier"):Connect(function()
+            child.LocalTransparencyModifier = child.Transparency
+        end)
+        
+        child.LocalTransparencyModifier = child.Transparency
+        
+    end
+end
+ 
+-- if the player steps in a vehicle
+camera:GetPropertyChangedSignal("CameraSubject"):Connect(function()
+    if camera.CameraSubject:IsA("VehicleSeat") then
+        camera.CameraSubject = humanoid
+    end
+end)
+    end
+
+end)
+
+AddCommand("evil bullets", {"evilbullets", "ebs"}, "bullet efect red and black", function()
+    if game.Players.LocalPlayer.Character.Head then
+   game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("","All")
+	game:GetService("StarterGui"):SetCore("SendNotification", {
+    Title = "Bullet effect";
+    Text = "on: Evil";
+    Duration = 3,
+	})
+        local RunService = game:GetService("RunService")
+
+RunService.RenderStepped:Connect(function()
+    if game.Players.LocalPlayer.Character.Humanoid then
+        --print("humanoid exists")
+        if game.Players.LocalPlayer.Character.Humanoid:findFirstChild("Bullet") then
+            print("bullet exists")
+            if game.Players.LocalPlayer.Character.Humanoid.Bullet:findFirstChild("Trail") then
+                print("trail exists")
+                if game.Players.LocalPlayer.Character.Humanoid:findFirstChild("Bullet").Name == "BulletDone" then
+                    print("bullet done")
+                end
+                if game.Players.LocalPlayer.Character.Humanoid:findFirstChild("Bullet"):findFirstChild("Trail").Lifetime < 0.21 then
+                    print("success!")
+                    game.Players.LocalPlayer.Character.Humanoid:findFirstChild("Bullet").Trail.Lifetime = 0.21
+                    game.Players.LocalPlayer.Character.Humanoid:findFirstChild("Bullet").Trail.Transparency = NumberSequence.new(0)
+                    game.Players.LocalPlayer.Character.Humanoid:findFirstChild("Bullet").Trail.Color = ColorSequence.new(Color3.fromRGB(255,0,0),Color3.fromRGB(0, 0, 1))Color3.fromRGB(255,0,0)Color3.fromRGB(248, 255, 0)Color3.fromRGB(255,0,0)Color3.fromRGB(248, 255, 0)
+                    game.Players.LocalPlayer.Character.Humanoid:findFirstChild("Bullet").Name = "BulletDone"
+                end
+            end
+        end
+    end
+end)
+    end
+
+end)
+
+AddCommand("black bullets", {"blackbullets", "bbs"}, "black trails", function()
+    if game.Players.LocalPlayer.Character.Head then
+   game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("","All")
+	game:GetService("StarterGui"):SetCore("SendNotification", {
+    Title = "Bullet effect";
+    Text = "on: Black";
+    Duration = 3,
+	})
+        local RunService = game:GetService("RunService")
+
+RunService.RenderStepped:Connect(function()
+    if game.Players.LocalPlayer.Character.Humanoid then
+        --print("humanoid exists")
+        if game.Players.LocalPlayer.Character.Humanoid:findFirstChild("Bullet") then
+            print("bullet exists")
+            if game.Players.LocalPlayer.Character.Humanoid.Bullet:findFirstChild("Trail") then
+                print("trail exists")
+                if game.Players.LocalPlayer.Character.Humanoid:findFirstChild("Bullet").Name == "BulletDone" then
+                    print("bullet done")
+                end
+                if game.Players.LocalPlayer.Character.Humanoid:findFirstChild("Bullet"):findFirstChild("Trail").Lifetime < 0.21 then
+                    print("success!")
+                    game.Players.LocalPlayer.Character.Humanoid:findFirstChild("Bullet").Trail.Lifetime = 0.21
+                    game.Players.LocalPlayer.Character.Humanoid:findFirstChild("Bullet").Trail.Transparency = NumberSequence.new(0)
+                    game.Players.LocalPlayer.Character.Humanoid:findFirstChild("Bullet").Trail.Color = ColorSequence.new(Color3.fromRGB(0,0,1),Color3.fromRGB(0, 0, 1))Color3.fromRGB(255,0,0)Color3.fromRGB(248, 255, 0)Color3.fromRGB(255,0,0)Color3.fromRGB(248, 255, 0)
+                    game.Players.LocalPlayer.Character.Humanoid:findFirstChild("Bullet").Name = "BulletDone"
+                end
+            end
+        end
+    end
+end)
+    end
+
+end)
+
+AddCommand("milkmap", {"milkmap", "cummap"}, "make the map white lol", function()
+    if game.Players.LocalPlayer.Character.Head then
+   game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("","All")
+	game:GetService("StarterGui"):SetCore("SendNotification", {
+    Title = "MilkMap";
+    Text = "on";
+    Duration = 3,
+	})
+        for _,v in pairs(workspace:GetDescendants()) do
+if v.ClassName == "Part"
+or v.ClassName == "SpawnLocation"
+or v.ClassName == "WedgePart"
+or v.ClassName == "Terrain"
+or v.ClassName == "MeshPart" then
+v.BrickColor = BrickColor.new(155, 155, 155)
+v.Material = "Plastic"
+end
+end
+
+for _,v in pairs(workspace:GetDescendants()) do
+if v.ClassName == "Decal"
+or v.ClassName == "Texture" then
+v:Destroy()
+end
+end
+    end
+
+end)
+
+AddCommand("real spy chat", {"truespy", "truechatspy"}, "0-0", function()
+    if game.Players.LocalPlayer.Character.Head then
+   --This script reveals ALL hidden messages in the default chat
+--chat "/MagmaHacks" to toggle!
+enabled = true
+--if true will check your messages too
+spyOnMyself = true
+--if true will chat the logs publicly (fun, risky)
+public = false
+--if true will use /me to stand out
+publicItalics = true
+--customize private logs
+privateProperties = {
+	Color = Color3.fromRGB(0,255,255); 
+	Font = Enum.Font.SourceSansBold;
+	TextSize = 18;
+}
+--////////////////////////////////////////////////////////////////
+local StarterGui = game:GetService("StarterGui")
+local Players = game:GetService("Players")
+local player = Players.LocalPlayer or Players:GetPropertyChangedSignal("LocalPlayer"):Wait() or Players.LocalPlayer
+local saymsg = game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest")
+local getmsg = game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("OnMessageDoneFiltering")
+local instance = (_G.chatSpyInstance or 0) + 1
+_G.chatSpyInstance = instance
+
+local function onChatted(p,msg)
+	if _G.chatSpyInstance == instance then
+		if p==player and msg:lower():sub(1,4)=="/MagmaHacks" then
+			enabled = not enabled
+			wait(0.3)
+			privateProperties.Text = "{SPY "..(enabled and "EN" or "DIS").."ABLED}"
+			StarterGui:SetCore("ChatMakeSystemMessage",privateProperties)
+		elseif enabled and (spyOnMyself==true or p~=player) then
+			msg = msg:gsub("[\n\r]",''):gsub("\t",' '):gsub("[ ]+",' ')
+			local hidden = true
+			local conn = getmsg.OnClientEvent:Connect(function(packet,channel)
+				if packet.SpeakerUserId==p.UserId and packet.Message==msg:sub(#msg-#packet.Message+1) and (channel=="All" or (channel=="Team" and public==false and Players[packet.FromSpeaker].Team==player.Team)) then
+					hidden = false
+				end
+			end)
+			wait(1)
+			conn:Disconnect()
+			if hidden and enabled then
+				if public then
+					saymsg:FireServer((publicItalics and "/me " or '').."{SPY} [".. p.Name .."]: "..msg,"All")
+				else
+					privateProperties.Text = "{SPY} [".. p.Name .."]: "..msg
+					StarterGui:SetCore("ChatMakeSystemMessage",privateProperties)
+				end
+			end
+		end
+	end
+end
+
+for _,p in ipairs(Players:GetPlayers()) do
+	p.Chatted:Connect(function(msg) onChatted(p,msg) end)
+end
+Players.PlayerAdded:Connect(function(p)
+	p.Chatted:Connect(function(msg) onChatted(p,msg) end)
+end)
+privateProperties.Text = "{SPY "..(enabled and "EN" or "DIS").."ABLED}"
+StarterGui:SetCore("ChatMakeSystemMessage",privateProperties)
+if not player.PlayerGui:FindFirstChild("Chat") then wait(3) end
+local chatFrame = player.PlayerGui.Chat.Frame
+chatFrame.ChatChannelParentFrame.Visible = true
+chatFrame.ChatBarParentFrame.Position = chatFrame.ChatChannelParentFrame.Position+UDim2.new(UDim.new(),chatFrame.ChatChannelParentFrame.Size.Y)
+    end
+
+end)
+
+
+AddCommand("antigh", {"019938", "019938"}, "kill yourself", function()
+    if game.Players.LocalPlayer.Character.Head then
+    -- By xaxa/zxciaz/fiviefourteen/xix on v3rm
+local Players, Uis, SGui = game:GetService"Players", game:GetService"UserInputService", game:GetService"StarterGui"; -- Services
+local Client, AntiGH = Players.LocalPlayer, true;
+
+function Notify(NTitle, NText, NIcon, NDuration)
+   SGui:SetCore("SendNotification", {
+       Title = NTitle;
+       Text = NText;
+       Icon = NIcon;
+       Duration = NDuration;
+   })
+end
+
+function StateChangedEvent(T, Changed)
+   if AntiGH == true then
+       if Client and Client.Character and Client.Character:FindFirstChildOfClass"Humanoid" then
+           if Changed == Enum.HumanoidStateType.FallingDown or Changed == Enum.HumanoidStateType.PlatformStanding then
+               Client.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Running);Client.Character.Humanoid.PlatformStand = false -- Credits to Aidez for this part
+           end
+       end
+   end
+end
+Client.Character:WaitForChild"Humanoid".StateChanged:Connect(StateChangedEvent)
+
+function CharacterAddedEvent()
+   Client.Character:WaitForChild"Humanoid";
+   Client.Character.Humanoid.StateChanged:Connect(StateChangedEvent)
+end
+Client.CharacterAdded:Connect(CharacterAddedEvent)
+
+Uis.InputBegan:Connect(function(Key)
+   if not Uis:GetFocusedTextBox() then
+       if Key.KeyCode == Enum.KeyCode.RightAlt then
+           AntiGH = not AntiGH
+           Notify("xaxa", "Anti Ground-Hit: "..tostring(AntiGH), nil, 3)
+       end
+   end
+end)
+    end
+
+end)
+
+
+AddCommand("secretlol", {"17655", "17655"}, "kill yourself", function()
+    if game.Players.LocalPlayer.Character.Head then
+   LocalP.Character.Stamina.Changed:Connect(function()
+    LocalP.Character:WaitForChild"Stamina"
+    LocalP.Character.Stamina.Value = 100 
+end)
+LocalP.CharacterAdded:Connect(function()
+    LocalP.Character:WaitForChild"Stamina"
+    LocalP.Character.Stamina.Changed:Connect(function()
+        LocalP.Character.Stamina.Value = 100 
+    end)
+end)
+    end
+
+end)
+
+
+AddCommand("serverhop", {"serverhop", "hop"}, "kill yourself", function()
+    if game.Players.LocalPlayer.Character.Head then
+   game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("","All")
+	game:GetService("StarterGui"):SetCore("SendNotification", {
+    Title = "New Server";
+    Text = "Changing...";
+    Icon = "rbxassetid://2541869220";
+    Duration = 3,
+	})
+    local sl = game.HttpService:JSONDecode(game:HttpGet("https://games.roblox.com/v1/games/".. game.PlaceId.. "/servers/Public?sortOrder=Asc&limit=100"))
+for i,v in pairs(sl.data) do
+   if v.playing ~= v.maxPlayers then
+       game:service'TeleportService':TeleportToPlaceInstance(game.PlaceId, v.id)
+   end
+end
+    end
+
+end)
+
+AddCommand("cash esp", {"cashesp", "cash"}, "turn on cash esp", function()
+    if game.Players.LocalPlayer.Character.Head then
+game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("","All")
+	game:GetService("StarterGui"):SetCore("SendNotification", {
+    Title = "Cash esp";
+    Text = "Lets farm! "..game.Players.LocalPlayer.Name,
+    Duration = 3,
+	})
+  local function removeother(instance) 
+    for i,v in pairs(instance:GetChildren()) do
+	if v.Name == "ESP" then
+	    v:Destroy()
+	end
+	removeother(v)
+    end
+end
+
+function show(v)
+
+    local epic = Instance.new("Part")
+    epic.Parent = v
+    epic.Name = "parttrace"
+    epic.CFrame = v.CFrame
+    epic.Size = Vector3.new(0.2,0.2,0.2)
+    epic.Anchored = true
+    epic.Transparency = 1
+
+    local billgui = Instance.new('BillboardGui', epic)
+    local textlab = Instance.new('TextLabel', billgui)
+
+    billgui.Name = "ESP"
+    billgui.Adornee  = epic
+    billgui.AlwaysOnTop = true
+    billgui.ExtentsOffset = Vector3.new(0, 1, 0)
+    billgui.Size = UDim2.new(0, 5, 0, 5)
+	
+    textlab.Name = 'CASH'
+    textlab.BackgroundColor3 = Color3.new(255, 255, 255)
+    textlab.BackgroundTransparency = 1
+    textlab.BorderSizePixel = 0
+    textlab.Position = UDim2.new(0, 0, 0, -40)
+    textlab.Size = UDim2.new(1, 0, 10, 0)
+    textlab.Visible = true
+    textlab.ZIndex = 10
+    textlab.Font = 'ArialBold'
+    textlab.FontSize = 'Size14'
+    textlab.Text = "███████"
+    textlab.TextColor = BrickColor.new('Bright green')
+    textlab.TextStrokeColor3 = Color3.fromRGB(0,0,0)
+    textlab.TextStrokeTransparency = 0.6
+end
+
+local function tracecash(instance) 
+    for i,v in pairs(instance:GetChildren()) do
+	if v:IsA("MeshPart") and v.MeshId == "rbxassetid://511726060" then
+	    removeother(v.Parent)
+	    show(v)
+        end
+	tracecash(v)
+    end
+end
+
+for i,v in pairs(game.Workspace:GetChildren()) do
+    if v.Name == "RandomSpawner" then
+	if v:FindFirstChild("Model") then
+	    v.Model.ChildAdded:Connect(function(child)
+		tracecash(child)
+	    end)
+	end
+	v.ChildAdded:Connect(function(child)
+	    tracecash(child)
+	end)
+    end
+end
+
+game.Workspace.ChildAdded:Connect(function(child)
+    if child.Name == "RandomSpawner" then
+	repeat wait() until child.Model
+	tracecash(child)
+    end
+end)
+
+tracecash(game.Workspace)
+    end
+
+end)
+AddCommand("x to sit", {"xtosit", "xsit"}, "turn on key to sit with x", function()
+    if game.Players.LocalPlayer.Character.Head then
+   game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("","All")
+	game:GetService("StarterGui"):SetCore("SendNotification", {
+    Title = "X to sit";
+    Text = "Press X to sit ur character OFC";
+    Duration = 3,
+	})
+        game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(key)
+        if key == "x" then
+        game.Players['LocalPlayer'].Character.Humanoid.Sit = true
+        end
+        end)
+    end
+
+end)
+AddCommand("creepymap", {"creepymap", "cm"}, "silenthill be like", function()
+    if game.Players.LocalPlayer.Character.Head then
+   game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("","All")
+	game:GetService("StarterGui"):SetCore("SendNotification", {
+    Title = "Creepy Map";
+    Text = "doesn't it remind you of something? lol (rejoin to turn off im sorry)";
+    Duration = 3,
+	})
+game:GetService('RunService').RenderStepped:connect(function()
+        game.Lighting.TimeOfDay = "24:00:00"
+              end)
+game.Lighting.FogStart = 10 
+game.Lighting.FogEnd = 120 
+game.Lighting.FogColor = Color3.new(0,0,0)
+game.Lighting.TimeOfDay = "00:00"
+    end
+
+end)
+
+AddCommand("beast mode", {"beast mode", "bm"}, "turn on beastmode", function()
+    if game.Players.LocalPlayer.Character.Head then
+   game:GetService("StarterGui"):SetCore("SendNotification", {
+        Title = "Beast mode";
+        Text = "on";
+	})
+        local amount = 90
+
+        game:GetService'Workspace'.Camera.FieldOfView = amount
+        local lighting = game.Lighting
+        if lighting:FindFirstChild("ColorCorrection") then
+            lighting:FindFirstChild("ColorCorrection"):Remove()
+        end
+        if lighting:FindFirstChild("Correction") then
+            lighting:FindFirstChild("Correction"):Remove()
+        end
+        if lighting:FindFirstChildOfClass("SunRaysEffect") then
+            lighting:FindFirstChildOfClass("SunRaysEffect"):Remove()
+        end
+
+        local sunray = Instance.new("SunRaysEffect", lighting)
+        local sky = lighting.Sky
+        
+
+        sky.StarCount = 3000
+        sky.SunAngularSize = 21
+        sky.MoonAngularSize = 11
+
+        local correction = Instance.new("ColorCorrectionEffect", lighting)
+        correction.Name = "Correction"
+        correction.Saturation = -0.4
+        correction.TintColor = Color3.fromRGB(255,0, 0)
+    end
+
+end)
+
+AddCommand("mode off", {"modeoff", "moff"}, "turn off anymode", function()
+    if game.Players.LocalPlayer.Character.Head then
+   game:GetService("StarterGui"):SetCore("SendNotification", {
+        Title = "map mode";
+        Text = "off";
+	})
+        local amount = 70
+
+        game:GetService'Workspace'.Camera.FieldOfView = amount
+        local lighting = game.Lighting
+        if lighting:FindFirstChild("ColorCorrection") then
+            lighting:FindFirstChild("ColorCorrection"):Remove()
+        end
+        if lighting:FindFirstChild("Correction") then
+            lighting:FindFirstChild("Correction"):Remove()
+        end
+        if lighting:FindFirstChildOfClass("SunRaysEffect") then
+            lighting:FindFirstChildOfClass("SunRaysEffect"):Remove()
+        end
+
+        local sunray = Instance.new("SunRaysEffect", lighting)
+        local sky = lighting.Sky
+       
+
+        sky.StarCount = 3000
+        sky.SunAngularSize = 21
+        sky.MoonAngularSize = 11
+
+        local correction = Instance.new("ColorCorrectionEffect", lighting)
+        correction.Name = "Correction"
+        correction.Saturation = 0
+        correction.TintColor = Color3.fromRGB
+    end
+
+end)
+
+
+LocalP.Chatted:Connect(function(Msg)
+   CheckCmd(Msg)
+end)
+
+
+
+
+
+
+
+wait (99999)    
+end
+end
