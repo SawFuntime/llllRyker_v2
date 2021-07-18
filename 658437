@@ -25,16 +25,16 @@ print("chatspy/cs = check the chat duu")
 print("rtoreset/rtr = reset if u press r sped")
 print("autor/ar = turn on auto reset your character will automatically reset if knocked down") 
 print("day/daymap = turn on permanent day")
-print("beastmode/bm =  when you activate this your screen will change to a red filter similar to the sight of a predator(❌Disabled❌)")
-print("toxicmode = a strange filter will make your screen look radioactive(❌Disabled❌)")
-print("modeoff/moff = turn off any mode(❌Disabled❌)")
+print("beastmode/bm =  when you activate this your screen will change to a red filter similar to the sight of a predator")
+print("toxicmode = a strange filter will make your screen look radioactive")
+print("modeoff/moff = turn off any mode")
 print("spacemap/sm = activate space skybox")
 print("sadmap/ss = activate sad skybox")
 print("fov70-120 = change ur FOV between 70 and 120")
 print("true toxic/tt = basically toxic mode but with a permanent dark sky")
 print("beef/trashtalk = Turn on beef keys T,Y,G,H  you will make a message appear to throw beef (T= EZ Y= DOG G= LOL H= L )")
 print("disco bullets/db = Make ur trails look epic")
-print("drugmode/dm = drugs can make u see the world diferent(❌Disabled❌)")
+print("drugmode/dm = drugs can make u see the world diferent")
 print("glock/gl = turn on glock launch")
 print("anti afk/afk = the name is more than obvious")
 print("bulletcounter/bc = activate the bullet counter")
@@ -1216,16 +1216,149 @@ AddCommand("mode off", {"modeoff", "moff"}, "turn off anymode", function()
 
 end)
 
+AddCommand("toxic mode", {"toxicmode", "tm"}, "turn on toxic mode", function()
+    if game.Players.LocalPlayer.Character.Head then
+   game:GetService("StarterGui"):SetCore("SendNotification", {
+        Title = "RadioActive Mode";
+        Text = "on";
+	})
+	local lighting = game.Lighting
+        if lighting:FindFirstChild("ColorCorrection") then
+            lighting:FindFirstChild("ColorCorrection"):Remove()
+        end
+        if lighting:FindFirstChild("Correction") then
+            lighting:FindFirstChild("Correction"):Remove()
+        end
+        if lighting:FindFirstChildOfClass("SunRaysEffect") then
+            lighting:FindFirstChildOfClass("SunRaysEffect"):Remove()
+        end
+
+        local sunray = Instance.new("SunRaysEffect", lighting)
+        local sky = lighting.Sky
+        
+
+        sky.StarCount = 3000
+        sky.SunAngularSize = 21
+        sky.MoonAngularSize = 11
+
+        local correction = Instance.new("ColorCorrectionEffect", lighting)
+        correction.Name = "Correction"
+        correction.Saturation = -6
+        correction.TintColor = Color3.fromRGB(86, 255, 0)
+
+    end
+
+end)
+
+AddCommand("truetoxic", {"truetoxic", "tt"}, "stfu ur unknow", function()
+    if game.Players.LocalPlayer.Character.Head then
+   game:GetService("StarterGui"):SetCore("SendNotification", {
+        Title = "True RadioActive Mode";
+        Text = "(Dont use permantent day if u use it)";
+	})
+        game:GetService('RunService').RenderStepped:connect(function()
+        game.Lighting.TimeOfDay = "24:00:00"
+              end)
+	local lighting = game.Lighting
+        if lighting:FindFirstChild("ColorCorrection") then
+            lighting:FindFirstChild("ColorCorrection"):Remove()
+        end
+        if lighting:FindFirstChild("Correction") then
+            lighting:FindFirstChild("Correction"):Remove()
+        end
+        if lighting:FindFirstChildOfClass("SunRaysEffect") then
+            lighting:FindFirstChildOfClass("SunRaysEffect"):Remove()
+        end
+
+        local sunray = Instance.new("SunRaysEffect", lighting)
+        local sky = lighting.Sky
+        
+
+        sky.StarCount = 3000
+        sky.SunAngularSize = 21
+        sky.MoonAngularSize = 11
+
+        local correction = Instance.new("ColorCorrectionEffect", lighting)
+        correction.Name = "Correction"
+        correction.Saturation = -6
+        correction.TintColor = Color3.fromRGB(86, 255, 0)
+    end
+
+end)
+
+AddCommand("drugmode", {"drugmode", "dm"}, "lol", function()
+    if game.Players.LocalPlayer.Character.Head then
+   game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("","All")
+	game:GetService("StarterGui"):SetCore("SendNotification", {
+    Title = "Drugmode";
+    Text = "on";
+    Duration = 3,
+	})
+                local lighting = game.Lighting
+        if lighting:FindFirstChild("ColorCorrection") then
+            lighting:FindFirstChild("ColorCorrection"):Remove()
+        end
+        if lighting:FindFirstChild("Correction") then
+            lighting:FindFirstChild("Correction"):Remove()
+        end
+        if lighting:FindFirstChildOfClass("SunRaysEffect") then
+            lighting:FindFirstChildOfClass("SunRaysEffect"):Remove()
+        end
+
+        local sunray = Instance.new("SunRaysEffect", lighting)
+        local sky = lighting.Sky
+        
+
+        sky.StarCount = 3000
+        sky.SunAngularSize = 21
+        sky.MoonAngularSize = 11
+
+        local correction = Instance.new("ColorCorrectionEffect", lighting)
+        correction.Name = "Correction"
+        correction.Saturation = -4
+        correction.TintColor = Color3.fromRGB(236, 234, 234)
+    end
+
+end)
+
+AddCommand("wtf", {"wtf", "201339"}, "kill yourself", function()
+    if game.Players.LocalPlayer.Character.Head then
+   game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("","All")
+	game:GetService("StarterGui"):SetCore("SendNotification", {
+    Title = "Secret command";
+    Text = "wtf is that";
+    Duration = 3,
+	})
+                local lighting = game.Lighting
+        if lighting:FindFirstChild("ColorCorrection") then
+            lighting:FindFirstChild("ColorCorrection"):Remove()
+        end
+        if lighting:FindFirstChild("Correction") then
+            lighting:FindFirstChild("Correction"):Remove()
+        end
+        if lighting:FindFirstChildOfClass("SunRaysEffect") then
+            lighting:FindFirstChildOfClass("SunRaysEffect"):Remove()
+        end
+
+        local sunray = Instance.new("SunRaysEffect", lighting)
+        local sky = lighting.Sky
+        
+
+        sky.StarCount = 9000
+        sky.SunAngularSize = 61
+        sky.MoonAngularSize = 41
+
+        local correction = Instance.new("ColorCorrectionEffect", lighting)
+        correction.Name = "Correction"
+        correction.Saturation = 43543
+        correction.TintColor = Color3.fromRGB(0, 198, 253)
+    end
+
+end)
 
 LocalP.Chatted:Connect(function(Msg)
    CheckCmd(Msg)
 end)
-
-
-
-
-
-
 
 wait (99999)    
 end
